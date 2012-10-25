@@ -1,0 +1,3 @@
+redis
+requests
+http://justext.googlecode.com/files/justext-1.2.tar.gz

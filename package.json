@@ -1,0 +1,15 @@
+{
+  "name": "cacher",
+  "description": "Cache webpages as text",
+  "version": "0.1.0",
+  "repository": { "type": "git", "url": "https://github.com/chbrown/cacher.git" },
+  "homepage": "https://github.com/chbrown/cacher",
+  "author": "Christopher Brown <io@henrian.com>",
+  "dependencies": {
+    "regex-router": "*",
+    "optimist": "*",
+    "request": "*",
+    "hiredis": "*",
+    "redis": "*"
+  }
+}
