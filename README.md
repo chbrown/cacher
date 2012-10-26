@@ -1,3 +1,7 @@
+# cacher
+
+cacher is a node.js + python HTTP API for html to text and caching pipeline.
+
 ## Scripts
 
 `node cacher.js` listens for POST /app and POST /get HTTP requests at 127.0.0.1:8009
@@ -19,7 +23,7 @@ Or something like that.
 
 Files go in:
 
-    /usr/local/data/cacher
+    /usr/local/data/cacher/
 
 The file names are just the url, but `s/\W//g` (delete all non-word characters)
 
