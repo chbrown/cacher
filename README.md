@@ -25,7 +25,13 @@ Files go in:
 
     /usr/local/data/cacher/
 
-The file names are just the url, but `s/\W//g` (delete all non-word characters)
+The file names are just the url, but with the protocol deleted and most non-word characters converted to dashes.
+
+Specifically:
+
+1. delete `^https?://`
+2. replace all `[^-_.a-zA-Z0-9]+` with `-`
+3. truncate to 255 characters
 
 That directory should be made writeable by whatever user `worker.py` is running under,
 and at least readable by the user `cacher.js` runs as.
