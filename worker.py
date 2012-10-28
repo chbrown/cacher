@@ -20,7 +20,7 @@ def fetch(url):
         naked_url = protocol_re.sub('', url)
         long_filename = nonword_re.sub('-', naked_url)
         filename = long_filename[:255]
-        html = requests.get(url).text
+        html = requests.get(url, timeout=10).text
         text = u'\n'.join(p['text'] for p in justext.justext(html, stopwords) if p['class'] == 'good')
         with open('%s/%s' % (opts.directory, filename), 'w') as fp:
             fp.write(text.encode('utf8'))
